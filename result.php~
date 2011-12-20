@@ -1,7 +1,7 @@
 <?
 include"connect.php";
-$vrid = $_GET['vrid'];
-$result =  'SELECT * FROM `Result` WHERE `vr_id` = '.$vrid;
+
+$result =  'SELECT * FROM `Result` WHERE `vr_id` = 1';
 $query = mysql_query($result);
 $rows = mysql_num_rows($query);
 

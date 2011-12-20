@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 </head>
 <body>
-<form action="add.php"  method="get">
+<form action="add.php"  method="post">
 Номер версии: <input type ="text" name="number"><br>
 Описание: <input type ="text" name="about"><br>
 <input type="submit" value="Отправить"></form>
