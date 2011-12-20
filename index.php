@@ -1,0 +1,24 @@
+<?
+include"connect.php";
+$result =  'SELECT * FROM `Versions`';
+$query = mysql_query($result);
+$rows = mysql_num_rows($query);
+echo '<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+</head>
+<body>
+<form action="result.php"  method="post">
+
+<select>';
+for ($i=0; $i<$rows; $i++){
+  echo '<option name=vrid value="'.mysql_result($query, $i, 0).'">'.mysql_result($query, $i, 1).'</option>';
+};
+  echo'</select><input type="submit" value="Отправить"></form>
+</body>
+</html>';
+?>
